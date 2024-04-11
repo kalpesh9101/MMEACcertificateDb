@@ -1,2 +1,16 @@
-"start": "node index.js",
-    "dev":"npm install express mongodb cors body-parser jsonwebtoken",
+pipeline {
+    agent any
+
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building..'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying....'
+            }
+        }
+    }
+}
